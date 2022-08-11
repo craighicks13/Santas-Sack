@@ -1,0 +1,4 @@
+Install of apk fails after firmware update
+
+In terminal run this on the APK:
+zip -d app.apk res/drawable-xhdpi/icon.png

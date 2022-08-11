@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:44372be6b2f9bba7c95eaa03e5b4107a$ -->
+<TextureAtlas imagePath="game-assets.png">
+    <SubTexture name="bag animation/bag animation0001" x="883" y="362" width="111" height="68" frameX="-75" frameY="-93" frameWidth="275" frameHeight="200"/>
+    <SubTexture name="bag animation/bag animation0002" x="595" y="272" width="111" height="102" frameX="-75" frameY="-59" frameWidth="275" frameHeight="200"/>
+    <SubTexture name="bag animation/bag animation0003" x="708" y="268" width="111" height="92" frameX="-75" frameY="-69" frameWidth="275" frameHeight="200"/>
+    <SubTexture name="bag animation/bag animation0004" x="770" y="362" width="111" height="84" frameX="-75" frameY="-77" frameWidth="275" frameHeight="200"/>
+    <SubTexture name="bag animation/bag animation0005" x="877" y="186" width="113" height="80" frameX="-75" frameY="-81" frameWidth="275" frameHeight="200"/>
+    <SubTexture name="bag animation/bag animation0006" x="877" y="2" width="115" height="86" frameX="-75" frameY="-75" frameWidth="275" frameHeight="200"/>
+    <SubTexture name="bag animation/bag animation0007" x="877" y="90" width="113" height="94" frameX="-75" frameY="-67" frameWidth="275" frameHeight="200"/>
+    <SubTexture name="bag animation/bag animation0008" x="544" y="388" width="111" height="104" frameX="-75" frameY="-57" frameWidth="275" frameHeight="200"/>
+    <SubTexture name="bag animation/bag animation0009" x="431" y="388" width="111" height="114" frameX="-75" frameY="-47" frameWidth="275" frameHeight="200"/>
+    <SubTexture name="bag animation/bag animation0010" x="657" y="376" width="111" height="124" frameX="-75" frameY="-37" frameWidth="275" frameHeight="200"/>
+    <SubTexture name="dropped board/dropped001" x="57" y="498" width="53" height="12"/>
+    <SubTexture name="dropped board/dropped002" x="57" y="484" width="53" height="12"/>
+    <SubTexture name="dropped board/dropped003" x="2" y="498" width="53" height="12"/>
+    <SubTexture name="dropped board/dropped004" x="2" y="484" width="53" height="12"/>
+    <SubTexture name="elf" x="770" y="448" width="38" height="51"/>
+    <SubTexture name="game_background" x="2" y="2" width="320" height="480"/>
+    <SubTexture name="game_over_background" x="324" y="2" width="269" height="384"/>
+    <SubTexture name="game_over_game_center" x="657" y="160" width="218" height="77"/>
+    <SubTexture name="game_over_main_menu" x="657" y="81" width="218" height="77"/>
+    <SubTexture name="game_over_play_again" x="657" y="2" width="218" height="77"/>
+    <SubTexture name="pause_button" x="821" y="239" width="42" height="43"/>
+    <SubTexture name="presents/present001" x="595" y="220" width="43" height="50"/>
+    <SubTexture name="presents/present002" x="595" y="168" width="43" height="50"/>
+    <SubTexture name="presents/present003" x="595" y="116" width="43" height="50"/>
+    <SubTexture name="presents/smashed001" x="595" y="78" width="47" height="36" frameX="0" frameY="-14" frameWidth="47" frameHeight="50"/>
+    <SubTexture name="presents/smashed002" x="595" y="40" width="47" height="36" frameX="0" frameY="-14" frameWidth="47" frameHeight="50"/>
+    <SubTexture name="presents/smashed003" x="595" y="2" width="47" height="36" frameX="0" frameY="-14" frameWidth="47" frameHeight="50"/>
+    <SubTexture name="resume-button" x="324" y="388" width="105" height="117"/>
+    <SubTexture name="score-present" x="992" y="90" width="29" height="36"/>
+    <SubTexture name="start_button" x="821" y="284" width="187" height="76"/>
+    <SubTexture name="texture" x="810" y="448" width="33" height="33"/>
+</TextureAtlas>

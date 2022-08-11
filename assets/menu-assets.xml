@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:aec00e572c0a77ca2f4b7effbabd7d20$ -->
+<TextureAtlas imagePath="menu-assets.png">
+    <SubTexture name="back-to-game-button" x="646" y="367" width="320" height="51"/>
+    <SubTexture name="back-to-menu-button" x="646" y="314" width="320" height="51"/>
+    <SubTexture name="best-button-active" x="786" y="497" width="152" height="77"/>
+    <SubTexture name="best-button-inactive" x="632" y="497" width="152" height="77"/>
+    <SubTexture name="game_center_button" x="940" y="497" width="79" height="77"/>
+    <SubTexture name="latest-button-active" x="478" y="484" width="152" height="77"/>
+    <SubTexture name="latest-button-inactive" x="324" y="484" width="152" height="77"/>
+    <SubTexture name="main_menu_background" x="324" y="2" width="320" height="480"/>
+    <SubTexture name="main_menu_play" x="646" y="261" width="320" height="51"/>
+    <SubTexture name="main_menu_presents" x="646" y="2" width="320" height="204"/>
+    <SubTexture name="main_menu_scores" x="646" y="208" width="320" height="51"/>
+    <SubTexture name="main_menu_settings" x="2" y="966" width="320" height="51"/>
+    <SubTexture name="scores_background" x="2" y="484" width="320" height="480"/>
+    <SubTexture name="settings-check-mark" x="953" y="420" width="61" height="59"/>
+    <SubTexture name="settings-mute-button" x="968" y="2" width="46" height="46"/>
+    <SubTexture name="settings-reset-scores-button" x="646" y="420" width="305" height="75"/>
+    <SubTexture name="settings_background" x="2" y="2" width="320" height="480"/>
+</TextureAtlas>
