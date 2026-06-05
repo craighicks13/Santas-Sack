@@ -1,0 +1,28 @@
+[gd_scene format=3]
+
+[node name="GameOver" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Title" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 160.0
+offset_right = 260.0
+offset_bottom = 200.0
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="PlayAgain" type="Button" parent="."]
+offset_left = 90.0
+offset_top = 260.0
+offset_right = 230.0
+offset_bottom = 300.0
+text = "Play Again"
+
+[node name="MainMenu" type="Button" parent="."]
+offset_left = 90.0
+offset_top = 320.0
+offset_right = 230.0
+offset_bottom = 360.0
+text = "Main Menu"
