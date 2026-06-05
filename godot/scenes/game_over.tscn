@@ -1,28 +1,24 @@
-[gd_scene format=3]
+[gd_scene load_steps=5 format=3]
 
-[node name="GameOver" type="Control"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/game_over_background.tres" id="1"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/game_over_play_again.tres" id="2"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/game_over_main_menu.tres" id="3"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/game_over_game_center.tres" id="4"]
 
-[node name="Title" type="Label" parent="."]
-offset_left = 60.0
-offset_top = 160.0
-offset_right = 260.0
-offset_bottom = 200.0
-text = "Game Over"
-horizontal_alignment = 1
+[node name="GameOver" type="Node2D"]
 
-[node name="PlayAgain" type="Button" parent="."]
-offset_left = 90.0
-offset_top = 260.0
-offset_right = 230.0
-offset_bottom = 300.0
-text = "Play Again"
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+position = Vector2(320, 480)
 
-[node name="MainMenu" type="Button" parent="."]
-offset_left = 90.0
-offset_top = 320.0
-offset_right = 230.0
-offset_bottom = 360.0
-text = "Main Menu"
+[node name="PlayAgainButton" type="Sprite2D" parent="."]
+texture = ExtResource("2")
+position = Vector2(320, 480)
+
+[node name="MainMenuButton" type="Sprite2D" parent="."]
+texture = ExtResource("3")
+position = Vector2(320, 600)
+
+[node name="GameCenterButton" type="Sprite2D" parent="."]
+texture = ExtResource("4")
+position = Vector2(320, 720)

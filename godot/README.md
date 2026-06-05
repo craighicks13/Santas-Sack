@@ -58,42 +58,51 @@ godot/
 | `utils/ObjectPool.as` | not needed at this scale; revisit if profiling demands |
 | `release_nape.swc` (Nape physics) | not needed — original code uses point distance, no real physics |
 
-## Asset import (do this once)
+## Assets — already imported
 
-1. **Audio.** Copy `assets/audio/*.mp3` from the repo root into
-   `godot/assets/audio/`. In the editor, select each `AudioStreamPlayer`
-   under the `MusicManager` autoload and assign the corresponding stream.
-2. **Sprite atlas.** Either:
-   - Re-export `assets/game-assets@2x.png` from TexturePacker using its
-     built-in "Godot 4" framework (recommended), or
-   - Slice `game-assets@2x.png` into individual PNGs using the
-     `assets/game-assets@2x.xml` coordinates.
-   Then assign the resulting `AtlasTexture` / `Sprite2D.texture` /
-   `SpriteFrames` resources to the placeholder nodes in `play.tscn`,
-   `present.tscn`, `santa.tscn`.
-3. **Bitmap font.** Drop `assets/GameFont.fnt` + `GameFont.png` into
-   `godot/assets/fonts/`; Godot imports BMFont as a `FontFile` automatically.
-   Apply it to the `ScoreLabel` and game-over labels.
-4. **Particles.** Open `assets/particle.pex` in a text editor; translate the
-   parameters (gravity, speed, lifespan, colours) into the
-   `CatchParticles` `CPUParticles2D` node in `play.tscn`.
-5. **Background.** Add `game_background` from the atlas as the first child
-   of `Play` (behind `Elf`), or load `assets/2x/loading-screen.png` as the
-   menu background.
+The repo's @2x sprite atlases, audio, bitmap font, and particle file are
+copied under `godot/assets/`, and 48 `AtlasTexture` `.tres` resources plus
+4 `SpriteFrames` `.tres` files are pre-generated. All scenes reference real
+textures — opening the project should render the game art straight away.
+
+Regenerate if `assets/atlas/*.xml` changes:
+
+```bash
+python3 godot/tools/generate_atlas_resources.py
+```
+
+Notes on what's done vs. still rough:
+
+- **Project base** is 640×960 so the @2x assets render 1:1; Godot's
+  `canvas_items / keep` stretch handles all real device sizes.
+- **Audio** streams are loaded at runtime by `music_manager.gd`; the
+  music stream's `loop` flag is set in code so it loops without editor
+  intervention.
+- **Bitmap font** is applied to `ScoreLabel` via `theme_override_fonts`.
+- **Particles** use a rough hand-translated `CPUParticles2D` config.
+  Open `assets/atlas/particle.pex` and refine colours/speeds in the
+  inspector when you have the real values in front of you.
+- **Positions** (Santa Y offset, pause-button placement, drop-counter Y)
+  are first-pass best guesses — tweak in the editor.
+- **Menu/game-over buttons** are `Sprite2D`s without input handling yet;
+  swap to `TextureButton` and wire `pressed` to `Game.change_state(...)`
+  in a follow-up pass.
 
 ## Known TODOs in the scaffold
 
+- Menu and game-over buttons are `Sprite2D` placeholders — convert to
+  `TextureButton` and wire signals to `Game.change_state(...)`.
 - `play.gd::_on_game_over` doesn't yet show the game over UI — pick one:
   modal overlay (`add_child(game_over.instantiate())`) or full scene swap
   (`Game.change_state(Game.State.GAME_OVER)`).
 - No pause screen yet (was `view/PauseScreen.as`).
 - No settings or scores screens yet.
 - No Game Center integration (was `GameCenterController.as`).
-- `santa.tscn` not extracted yet — the `Santa` node lives inline in
-  `play.tscn` for now; promote it to its own scene once you've added the
-  bag animation `SpriteFrames`.
-- `present_smashed.tscn` not built — add an `AnimatedSprite2D` that plays
-  the `smashed00x` frames at the impact point.
+- `present_smashed.tscn` not built — wire the
+  `presents_smashed_present.tres` `SpriteFrames` to an `AnimatedSprite2D`
+  that plays once at each ground-impact point.
+- Particle parameters in `play.tscn` are placeholder; refine from the
+  values in `assets/atlas/particle.pex`.
 
 ## Effort to here vs. remaining
 

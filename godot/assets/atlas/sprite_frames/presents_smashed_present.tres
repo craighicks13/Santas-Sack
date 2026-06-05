@@ -1,0 +1,17 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/presents_smashed_present001.tres" id="1"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/presents_smashed_present002.tres" id="2"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/presents_smashed_present003.tres" id="3"]
+
+[resource]
+animations = [{
+"frames": [
+{ "duration": 1.0, "texture": ExtResource("1") },
+{ "duration": 1.0, "texture": ExtResource("2") },
+{ "duration": 1.0, "texture": ExtResource("3") }
+],
+"loop": false,
+"name": &"presents_smashed_present",
+"speed": 24.0
+}]

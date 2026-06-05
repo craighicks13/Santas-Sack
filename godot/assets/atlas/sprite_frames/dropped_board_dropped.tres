@@ -1,0 +1,19 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/dropped_board_dropped001.tres" id="1"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/dropped_board_dropped002.tres" id="2"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/dropped_board_dropped003.tres" id="3"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/dropped_board_dropped004.tres" id="4"]
+
+[resource]
+animations = [{
+"frames": [
+{ "duration": 1.0, "texture": ExtResource("1") },
+{ "duration": 1.0, "texture": ExtResource("2") },
+{ "duration": 1.0, "texture": ExtResource("3") },
+{ "duration": 1.0, "texture": ExtResource("4") }
+],
+"loop": false,
+"name": &"dropped_board_dropped",
+"speed": 24.0
+}]

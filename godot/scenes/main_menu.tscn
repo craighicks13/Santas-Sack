@@ -1,21 +1,29 @@
-[gd_scene format=3]
+[gd_scene load_steps=6 format=3]
 
-[node name="MainMenu" type="Control"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/main_menu_background.tres" id="1"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/main_menu_presents.tres" id="2"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/main_menu_play.tres" id="3"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/main_menu_scores.tres" id="4"]
+[ext_resource type="Texture2D" path="res://assets/atlas/tex/main_menu_settings.tres" id="5"]
 
-[node name="Title" type="Label" parent="."]
-offset_left = 60.0
-offset_top = 120.0
-offset_right = 260.0
-offset_bottom = 160.0
-text = "Santa's Sack"
-horizontal_alignment = 1
+[node name="MainMenu" type="Node2D"]
 
-[node name="StartButton" type="Button" parent="."]
-offset_left = 90.0
-offset_top = 240.0
-offset_right = 230.0
-offset_bottom = 290.0
-text = "Start"
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+centered = false
+
+[node name="Presents" type="Sprite2D" parent="."]
+texture = ExtResource("2")
+position = Vector2(320, 280)
+
+[node name="PlayButton" type="Sprite2D" parent="."]
+texture = ExtResource("3")
+position = Vector2(320, 600)
+
+[node name="ScoresButton" type="Sprite2D" parent="."]
+texture = ExtResource("4")
+position = Vector2(320, 720)
+
+[node name="SettingsButton" type="Sprite2D" parent="."]
+texture = ExtResource("5")
+position = Vector2(320, 840)

@@ -1,22 +1,24 @@
 extends Node
 
-# Wire AudioStreamPlayer children up in the editor once .mp3 assets are imported.
-# These nodes are created at runtime so the autoload works before assets exist.
-
 var music: AudioStreamPlayer
 var sfx_coin: AudioStreamPlayer
 var sfx_smash: AudioStreamPlayer
 var sfx_game_over: AudioStreamPlayer
 
 func _ready() -> void:
-	music = _make_player("Music")
-	sfx_coin = _make_player("Coin")
-	sfx_smash = _make_player("Smash")
-	sfx_game_over = _make_player("GameOver")
+	music = _make_player("Music", "res://assets/audio/music.mp3", true)
+	sfx_coin = _make_player("Coin", "res://assets/audio/coin.mp3", false)
+	sfx_smash = _make_player("Smash", "res://assets/audio/smash.mp3", false)
+	sfx_game_over = _make_player("GameOver", "res://assets/audio/game-over.mp3", false)
 
-func _make_player(name: String) -> AudioStreamPlayer:
+func _make_player(name: String, path: String, loop: bool) -> AudioStreamPlayer:
 	var p := AudioStreamPlayer.new()
 	p.name = name
+	var stream = load(path)
+	if stream:
+		if "loop" in stream:
+			stream.loop = loop
+		p.stream = stream
 	add_child(p)
 	return p
 
